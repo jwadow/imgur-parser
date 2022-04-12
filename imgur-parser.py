@@ -8,7 +8,8 @@ import threading
 noneWorking = [0, 503, 4939, 4940, 4941, 6167, 12003, 5556, 5082]
 
 userhome = os.path.expanduser('~')
-save_folder = userhome + '/Desktop/Pictures_From_IMGUR/'
+save_folder = userhome + '/Desktop/imgur-parser/'
+parse_threads = 20
 
 if not os.path.exists(save_folder):
     os.makedirs(save_folder)
@@ -44,6 +45,6 @@ def main():
             print("Saved: " + printsc)
 
 if __name__ == '__main__':
-    for i in range(20):
+    for i in range(parse_threads):
         my_thread = threading.Thread(target=main)
         my_thread.start()
