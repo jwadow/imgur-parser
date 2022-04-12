@@ -6,8 +6,9 @@ import requests
 import threading
 
 noneWorking = [0, 503, 4939, 4940, 4941, 6167, 12003, 5556, 5082]
-
 userhome = os.path.expanduser('~')
+
+#edit this to change folder or parsing threads
 save_folder = userhome + '/Desktop/imgur-parser/'
 parse_threads = 20
 
